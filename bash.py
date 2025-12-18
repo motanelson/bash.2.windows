@@ -49,7 +49,7 @@ while(True):
     if iii=="path":
         print(os.getenv("path"))
         t=False
-    if iii=="copy" or "cp":
+    if iii=="copy" or iii=="cp":
         copys(ii[1],ii[2])
         t=False
 
