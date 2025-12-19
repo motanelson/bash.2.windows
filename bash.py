@@ -110,6 +110,10 @@ while(True):
         t=False
         r="\n".join(os.listdrives())
         print(r)
+    if iii=="cls" or iii=="clear":
+        t=False
+        print("\033c")
+
     if t:
         os.system(i)
     
