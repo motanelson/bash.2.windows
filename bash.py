@@ -113,7 +113,11 @@ while(True):
     if iii=="cls" or iii=="clear":
         t=False
         print("\033c")
-
+    if iii=="color":
+        t=False
+        if len(ii)>1:
+            if(len(ii[1])>1):
+                print("\033[4$1;30$1m")
     if t:
         os.system(i)
     
