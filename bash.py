@@ -94,6 +94,18 @@ while(True):
         t=False
         if len(ii)>1:
             editline(ii[1])
+    if iii=="hex" or iii=="hexedit":
+       t=False
+       if len(ii)>1:
+           f1=open(ii[1],"r")
+           r=f1.read()
+           f1.close()
+           r=r.encode("utf-8")
+           r=str(r)
+           r=r[1:]
+           
+           r=r.replace("'"," ")
+           print(str(r))
 
     if t:
         os.system(i)
