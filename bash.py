@@ -1,4 +1,19 @@
 import os
+def editline(i):
+    r=""
+    if os.path.exists(i):
+        f1=open(i,"r")
+        r=f1.read()
+        f1.close()
+        print(r)
+    while(True):
+        ii=input()
+        iii=ii.strip()
+        if iii=="":
+            break
+        f1=open(i,"a")
+        f1.write(ii+"\r\n")
+        f1.close()
 def copys(s1:str,s2:str):
     s=b""
     try:
@@ -75,6 +90,11 @@ while(True):
            print(r)
     if iii=="exit":
        break
+    if iii=="editline" or iii=="edit" or iii=="edlin":
+        t=False
+        if len(ii)>1:
+            editline(ii[1])
+
     if t:
         os.system(i)
     
