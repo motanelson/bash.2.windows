@@ -119,6 +119,15 @@ while(True):
             if(len(ii[1])>1):
                 r=ii[1]
                 print("\033[4$1;3$2m".replace("$1",r[0:1]).replace("$2",r[1:2]))
+    if iii=="print":
+        if len(ii)>1:
+        
+            f1=open(ii[1],"r")
+            r=f1.read()
+            f1.close()
+            f1=open("lpt","w")
+            f1.write(r)
+            f1.close()
     if t:
         os.system(i)
     
