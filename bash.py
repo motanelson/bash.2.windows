@@ -1,4 +1,5 @@
 import os
+import time
 def editline(i):
     r=""
     if os.path.exists(i):
@@ -120,6 +121,8 @@ while(True):
                 r=ii[1]
                 print("\033[4$1;3$2m".replace("$1",r[0:1]).replace("$2",r[1:2]))
     if iii=="print":
+        t=False
+
         if len(ii)>1:
         
             f1=open(ii[1],"r")
@@ -128,6 +131,11 @@ while(True):
             f1=open("lpt","w")
             f1.write(r)
             f1.close()
+    if iii=="sleep":
+        t=False
+
+        if len(ii)>1:
+            time.sleep(int(ii[1].strip()))
     if t:
         os.system(i)
     
